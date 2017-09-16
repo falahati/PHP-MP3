@@ -1,35 +1,34 @@
 {
-    "name": "falahati/php-mp3",
-    "description": "PHP-MP3 is a simple library for reading and manipulating MPEG audio (MP3)",
-	"homepage" : "https://github.com/falahati/PHP-MP3",
-    "keywords": ["mp3", "audio", "edit"],
-    "license": "LGPL-3.0",
-    "authors": [
-        {
-            "name": "Soroush Falahati",
-            "homepage": "https://falahati.net"
-        }
-    ],
-	"support": {
-        "issues": "https://github.com/falahati/PHP-MP3/issues"
-        "source": "https://github.com/falahati/PHP-MP3"
+  "name": "falahati/php-mp3",
+  "description": "PHP-MP3 is a simple library for reading and manipulating MPEG audio (MP3)",
+  "homepage": "https://github.com/falahati/PHP-MP3",
+  "keywords": [ "mp3", "audio", "edit" ],
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+      "name": "Soroush Falahati",
+      "homepage": "https://falahati.net"
     }
-    "type": "project",
-    "require": {
-		"php": ">=5.4"
-    },
-	"require-dev": {
-		"phpunit/phpunit": "5.2.*"
-    },
-	"autoload": {
-        "psr-4": {
-            "falahati\\PHPMP3\\": "src/"
-        }
-    },
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/falahati/PHP-MP3"
-		}
-	]
+  ],
+  "support": {
+    "issues": "https://github.com/falahati/PHP-MP3/issues",
+    "source": "https://github.com/falahati/PHP-MP3"
+  },
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "falahati\\PHPMP3\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/falahati/PHP-MP3"
+    }
+  ]
 }
