@@ -413,7 +413,7 @@ namespace falahati\PHPMP3 {
 		 * @param int $length
 		 * @return \falahati\PHPMP3\MpegAudio
 		 */
-		public function append(\PHPMP3\MpegAudio $srcAudio, $index = 0, $length = -1) {
+		public function append(\falahati\PHPMP3\MpegAudio $srcAudio, $index = 0, $length = -1) {
 			if ($index < 0 || $index >= $srcAudio->getFrameCounts()) {
 				return $this;
 			}
