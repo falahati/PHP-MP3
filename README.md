@@ -16,15 +16,39 @@ Features
 * Trim (Cut) a MPEG Audio data and merge multiple MPEG audio streams
 * Ability to strip MPEG Audio data from starting and ending ID3 (or similar) metadata information
 
+Samples
+--------
+
+Strip ID3 tags from a MP3 file:
+```PHP
+\falahati\PHPMP3\MpegAudio::fromFile("old.mp3")->stripTags()->saveFile("new.mp3");
+```
+
+Cut a MP3 file to extract a 30sec preview starting at the 10th second:
+```PHP
+\falahati\PHPMP3\MpegAudio::fromFile("old.mp3")->trim(10, 30)->saveFile("new.mp3");
+```
+
+Append memory stored MP3 data to the end of a MP3 file:
+```PHP
+\falahati\PHPMP3\MpegAudio::fromFile("old.mp3")->append(\falahati\PHPMP3\MpegAudio::fromData(base64_decode("/**BASE64-DATA**/")))->saveFile("new.mp3");
+```
+
+Extracting MP3 file total duration:
+```PHP
+echo \falahati\PHPMP3\MpegAudio::fromFile("old.mp3")->getTotalDuration();
+```
+
 To Do List
 --------
 
 * Add Unit Tests
-* Ability to load and manipulate data from directly from, and to a `resource`
+* Ability to load and manipulate data directly from, and to a `resource`
 * Ability to add simple ID3 metadata information to the MPEG Audio before saving
 
 License
 --------
+
 PHP-MP3 library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
