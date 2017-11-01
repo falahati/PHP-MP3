@@ -398,7 +398,9 @@ namespace falahati\PHPMP3 {
 				return $this;
 			}
 			$count = min($this->getFrameCounts() - $index, $count);
-
+			if ($count == 0) {
+				return $this;
+			}
 			$firstFrameHeader = $this->getFrameHeader($index);
 			$lastFrameHeader = $this->getFrameHeader($index + ($count - 1));
 			$this->slice(($lastFrameHeader->getOffset() + $lastFrameHeader->getLength()) - $firstFrameHeader->getOffset(), $firstFrameHeader->getOffset());
