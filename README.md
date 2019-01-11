@@ -1,12 +1,14 @@
-PHP-MP3
-=========================
+# PHP-MP3
 
 PHP-MP3 is a simple library for reading and manipulating MPEG audio (MP3).
 
 This library is based on a similar project with the same name written by [thegallagher](https://github.com/thegallagher/PHP-MP3) which it-self was based on an script from [regin](https://web.archive.org/web/20120211192505/http://www.sourcerally.net/Scripts/20-PHP-MP3-Class).
 
-Features
---------
+## Composer
+
+`composer require falahati/php-mp3:dev-master`
+
+## Features
 
 * Correctly identifies MPEG Audio Version 1, 2 and 2.5
 * Correctly identifies MPEG Audio Profile 1, 2 and 3
@@ -16,8 +18,10 @@ Features
 * Trim (Cut) a MPEG Audio data and merge multiple MPEG audio streams
 * Ability to strip MPEG Audio data from starting and ending ID3 (or similar) metadata information
 
-Samples
---------
+## Donation
+[<img width="24" height="24" src="http://icons.iconarchive.com/icons/sonya/swarm/256/Coffee-icon.png"/>**Every coffee counts! :)**](https://www.coinpayments.net/index.php?cmd=_donate&reset=1&merchant=820707aded07845511b841f9c4c335cd&item_name=Donate&currency=USD&amountf=10.00000000&allow_amount=1&want_shipping=0&allow_extra=1)
+
+## Samples
 
 Strip ID3 tags from a MP3 file:
 ```PHP
@@ -39,15 +43,13 @@ Extracting MP3 file total duration:
 echo \falahati\PHPMP3\MpegAudio::fromFile("old.mp3")->getTotalDuration();
 ```
 
-To Do List
---------
+## To Do List
 
 * Add Unit Tests
 * Ability to load and manipulate data directly from, and to a `resource`
 * Ability to add simple ID3 metadata information to the MPEG Audio before saving
 
-License
---------
+## License
 
 PHP-MP3 library is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
