@@ -436,6 +436,7 @@ namespace falahati\PHPMP3 {
 					}
 				}
 				$this->insert($data, $endOfStream);
+				$this->analyze();
 			}
 			return $this;
 		}
