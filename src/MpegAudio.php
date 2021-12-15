@@ -127,7 +127,8 @@ namespace falahati\PHPMP3 {
 					$length = $this->memoryLength - $index;
 				}
 				$this->memoryPointer = min($this->memoryLength, $index + $length);
-				return substr($this->memory, $index, $length);
+				$sub = substr($this->memory, $index, $length);
+				return empty($sub) ? false : $sub;
 			} else {
 				// TODO STREAM
 			}
